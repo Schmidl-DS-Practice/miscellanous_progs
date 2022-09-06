@@ -15,12 +15,13 @@ class DisabilityRatingCalculator:
         else:
             total_body = 100
             percentage = 0
-            if not ratings:
-                return percentage
 
-            else:
-                max_rating = ratings.pop(ratings.index(max(ratings)))
-                percentage += total_body * (max_rating / 100)
-                total_body -= max_rating
+            while (total_body > 0) or (percentage <= 100):
+                if not ratings:
+                    return percentage
 
-        return percentage
+                else:
+                    max_rating = ratings.pop(ratings.index(max(ratings)))
+                    running = round(total_body * (max_rating / 100))
+                    percentage += running
+                    total_body -= running

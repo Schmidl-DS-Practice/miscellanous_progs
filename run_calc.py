@@ -29,7 +29,7 @@ def main():
 
     drc = DisabilityRatingCalculator()
     final_rating = drc.calculate(run(args))
-    print(f"Your final disability rating is: {final_rating}%")
+    print(f"Your final disability rating: {round(final_rating)}%")
 
 if __name__ == "__main__":
     main()

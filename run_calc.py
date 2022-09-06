@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/opt/miniconda3/bin/python
 """
 Author: Scott Schmidl
 Date: 09/06/2022
